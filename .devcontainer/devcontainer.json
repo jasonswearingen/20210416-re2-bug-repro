@@ -1,0 +1,47 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.163.1/containers/ubuntu
+{
+	"name": "${containerWorkspaceFolderBasename} (Ubuntu 20.04 base)",
+	// // Update the 'image' property with your Docker image name.
+	// //from https://hub.docker.com/_/microsoft-vscode-devcontainers?tab=description
+	// "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu-20.04",
+	"build": {
+		"dockerfile": "Dockerfile",
+		// Update 'VARIANT' to pick an Ubuntu version: focal, bionic
+		"args": {
+			"VARIANT": "ubuntu-20.04"
+		}
+	},
+	// Set *default* container specific settings.json values on container create.
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"adam-watters.vscode-color-pick",
+		"alefragnani.project-manager",
+		"byi8220.indented-block-highlighting",
+		"christian-kohler.npm-intellisense",
+		"codezombiech.gitignore",
+		"dbaeumer.vscode-eslint",
+		"donjayamanne.git-extension-pack",
+		"donjayamanne.githistory",
+		"eamodio.gitlens",
+		"Gruntfuggly.todo-tree",
+		"hbenl.vscode-mocha-test-adapter",
+		"hbenl.vscode-test-explorer",
+		"ms-vscode.vscode-typescript-next",
+		"naumovs.color-highlight",
+		"stuart.unique-window-colors",
+		"VisualStudioExptTeam.vscodeintellicode",
+		"yzhang.markdown-all-in-one",
+		"ziyasal.vscode-open-in-github",
+		"mutantdino.resourcemonitor"
+	],
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "uname -a",
+	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode"
+}

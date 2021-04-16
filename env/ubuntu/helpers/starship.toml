@@ -1,0 +1,98 @@
+######  STARSHIP PROMPT CONFIG
+# docs here: https://starship.rs/config/#prompt
+
+# Don't print a new line at the start of the prompt
+add_newline = false
+
+# Replace the "❯" symbol in the prompt with "➜"
+[character]      # The name of the module we are configuring is "character"
+#symbol = "➜"     # The "symbol" segment is being set to "➜"
+use_symbol_for_status = true
+
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+#disabled = true
+display_private = true
+
+[time]
+disabled = false
+
+
+[hostname]
+ssh_only = true
+
+[git_branch]
+disabled = true
+
+[git_commit]
+disabled = true
+
+[git_state]
+disabled = true
+
+# big repos slow down the starship command line a ton
+[git_status]
+disabled = true
+
+[env_var]
+variable = "WSL_DISTRO_NAME"
+format = "WSL:$env_value"
+
+[directory]
+truncate_to_repo = false
+truncation_length = 0
+
+[memory_usage]
+disabled = false
+#threshold = 0
+
+[username]
+show_always = true
+
+# see https://starship.rs/config/#prompt
+format = "$all"
+
+prompt_order_old = [
+    "$username",
+    "$hostname",
+    "$kubernetes",
+    "$directory",
+    "$git_branch",
+    "$git_commit",
+    "$git_state",
+    "$git_status",
+    "$hg_branch",
+    "$docker_context",
+    "$package",
+    "$dotnet",
+    "$elixir",
+    "$elm",
+    "$erlang",
+    "$golang",
+    "$java",
+    "$julia",
+    "$nim",
+    "$nodejs",
+    "$ocaml",
+    "$php",
+    "$purescript",
+    "$python",
+    "$ruby",
+    "$rust",
+    "$terraform",
+    "$zig",
+    "$nix_shell",
+    "$conda",
+    "$memory_usage",
+    "$aws",
+    "$env_var",
+    "$crystal",
+    "$cmd_duration",
+    "$custom",
+    "$line_break",
+    "$jobs",
+    "$battery",
+    "$time",
+    "$character",
+]

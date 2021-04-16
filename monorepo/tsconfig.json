@@ -1,0 +1,110 @@
+{
+	"compileOnSave": true,
+	"compilerOptions": {
+		"module": "CommonJS",
+		"removeComments": false,
+		"preserveConstEnums": true,
+		"sourceMap": true,
+		"inlineSources": false,
+		"inlineSourceMap": false,
+		"declaration": false,
+		"jsx": "react",
+		"newLine": "LF",
+		"pretty": true,
+		"stripInternal": true,
+		"diagnostics": false,
+		"target": "es2018",
+		"watch": false,
+		"moduleResolution": "node",
+		"forceConsistentCasingInFileNames": true,
+		"noImplicitReturns": false, /////////  change for vNext
+		"noImplicitAny": true, /////////  change for vNext
+		"noImplicitThis": true, /////////  change for vNext
+		"noUnusedLocals": false, /////////  change for vNext
+		"noUnusedParameters": false,
+		"strictNullChecks": false, /////////  change for vNext
+		"suppressExcessPropertyErrors": true, /////////  change for vNext 
+		"suppressImplicitAnyIndexErrors": true, /////////  change for vNext
+		"noStrictGenericChecks": true, /////////  change for vNext
+		"skipLibCheck": true,
+		"alwaysStrict": true,
+		"allowJs": false,
+		//!next 2 lines: changed to TRUE for webpack compat, as per "tip" section found at: https://webpack.js.org/guides/typescript/
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true, /////////  change for vNext
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": true,
+		//"baseUrl": null,
+		//"charset": null,
+		"checkJs": false,
+		"composite": false, /////////  change for vNext
+		"downlevelIteration": false,
+		"emitBOM": false,
+		"emitDeclarationOnly": false,
+		"disableSizeLimit": false,
+		"emitDecoratorMetadata": false, /////////  change for vNext
+		"experimentalDecorators": false, /////////  change for vNext
+		"importHelpers": true, /////////  change for vNext
+		"keyofStringsOnly": true,
+		"noErrorTruncation": true,
+		"noFallthroughCasesInSwitch": true,
+		"resolveJsonModule": true,
+		"strictFunctionTypes": true,
+		"strictPropertyInitialization": false, /////////  change for vNext
+		"types": [
+			//"xlib-globals",
+			//"bluebird-global",
+			//"request-promise-any",
+			//"request-promise-any/errors",
+		],
+		"outDir": "built",
+		"rootDir": "src",
+		// "lib": [
+		//   "es2015",
+		//   "dom",
+		// ],
+		//"noLib": true,
+		// "plugins": [
+		//   {
+		//     "name": "typescript-tslint-plugin"
+		//   }
+		// ]
+		"plugins": [
+			{
+				"name": "typescript-tslint-plugin",
+				"alwaysShowRuleFailuresAsWarnings": false,
+				"configFile": "./tslint.json",
+				"suppressWhileTypeErrorsPresent": false,
+				"ignoreDefinitionFiles": true, //change after first pass fix
+				// "exclude": [  //moved to tslint.json
+				//   "**/node_modules/**/*",
+				//   "**/_graveyard/**/*",
+				//   "./built/**/*",
+				// ],
+			}
+		],
+	},
+	"include": [
+		//"./src/**/*",
+		"./src/**/*.ts",
+		"./src/**/*.tsx",
+		"./src/**/*.html",
+		//"./dev/_internal/**/*.ts",
+	],
+	"exclude": [
+		"node_modules",
+		"node_modules-*",
+		"node_modules_*",
+		"**/graveyard",
+		"**/_graveyard",
+		"./src/_graveyard/**/*.ts",
+		//"dist",
+		"node_modules",
+		"node_modules/**/*",
+		"**/node_modules",
+		"dist",
+		"dev/graveyard",
+		"typings",
+		"stage3-installed-typings",
+	]
+}
