@@ -1,0 +1,14 @@
+{
+  "name": "bugrepro",
+  "version": "0.0.0",
+  "main": "built/_index.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "argon2": "^0.27.2",
+    "re2": "^1.15.9"
+  },
+  "devDependencies": {
+    "typescript": "^4.2.4"
+  }
+}

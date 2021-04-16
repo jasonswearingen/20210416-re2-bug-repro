@@ -1,7 +1,7 @@
 {
 	"compileOnSave": true,
 	"compilerOptions": {
-		"module": "CommonJS",
+		"module": "ESNext",
 		"removeComments": false,
 		"preserveConstEnums": true,
 		"sourceMap": true,
